@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Test</title>
+</head>
+<style>
+    body {
+        padding: 0;
+        margin: 0;
+    }
+
+    #main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #ball {
+        height: 100px;
+        width: 100px;
+        background-color: cadetblue;
+        border-radius: 50%;
+    }
+</style>
+
+<body>
+    <div id="main">
+        <span id="ball"></span>
+    </div>
+
+    <script>
+        var ballEl = document.getElementById('ball')
+        ballEl.addEventListener('mouseover', () => {
+            getBig()
+        })
+        function getBig() {
+            let height = ballEl.getBoundingClientRect().height
+            let width = ballEl.getBoundingClientRect().width
+            ballEl.style.height = height + 10 + 'px'
+            ballEl.style.width = width + 10 + 'px'
+        }
+    </script>
+</body>
+
+</html>
